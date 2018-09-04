@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/common-ignore-exception/common-ignore-exception.iml" filepath="$PROJECT_DIR$/common-ignore-exception/common-ignore-exception.iml" />
       <module fileurl="file://$PROJECT_DIR$/common-web-parent.iml" filepath="$PROJECT_DIR$/common-web-parent.iml" />
     </modules>
   </component>

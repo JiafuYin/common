@@ -6,8 +6,55 @@
 
     <groupId>com.common</groupId>
     <artifactId>common-web-parent</artifactId>
-	
+    <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
+    <modules>
+        <module>common-ignore-exception</module>
+    </modules>
 
-    
+    <properties>
+        <spring.version>3.2.12.RELEASE</spring.version>
+        <mysql-connector-java-version>5.1.32</mysql-connector-java-version>
+        <aspectj.version>1.7.4</aspectj.version>
+
+        <!-- Plugin的属性 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+
+        <!-- 是否跳过测试 -->
+        <skip.test>true</skip.test>
+
+        <!-- 版本由这个开放给其他调用，升级只需要改这个即可，其他的版本号跟着升级。 -->
+        <gillion-web-version>${project.version}</gillion-web-version>
+
+
+    </properties>
+
+    <dependencyManagement>
+
+        <dependencies>
+
+
+            <!-- spring jdbc -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <!-- aop -->
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjrt</artifactId>
+                <version>${aspectj.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java-version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
